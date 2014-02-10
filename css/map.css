@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 10;
+    height: 100%;
+}
+#map{
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+}
+.fill {
+    height: 100%;
+    min-height: 100%;
+}
+
+#logo {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    height: 50px;
+    width: 250px;
+    background-image: url('../images/Logo-Shelter-Cluster-Philippines-400.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
