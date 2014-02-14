@@ -11,24 +11,28 @@
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
         <link href='css/map.css' rel='stylesheet' />
-        <style>
-
-        </style>
     </head>
     <body>
         <!-- Page content -->
         <div id="container" class="fill">
-          <div class="col-md-12 fill">
-           <div class="row">
-             <div id="header" class="col-md-12">
-                 <h2>Shelter Cluster Interactive Map</h2>
+            <div id="header">
+              <div class="row">               
+                 <div class="col-md-4">
+                    <h3>Shelter Cluster Interactive Map</h3>
+                 </div>
+                 <div id="header_desc" class="col-md-5">
+                     <p>The data presented in this dashboard is only the data reported to the Shelter
+Cluster by agencies. In general almost all agencies are reporting to the Shelter
+Cluster. The efforts of local government and many small local NGO's are not
+captured thus far. The Shelter Cluster motivates all agencies working in the shelter
+response to report their activities to reporting.phil@sheltercluster.org</p>
+                 </div>
+               <div id="logo"></div>
              </div>
-             <div id="logo"></div>
            </div>
            <div class="row">
              <div id='map' class="col-md-12"></div>
            </div>
-          </div>
         </div>
         <script src="js/main.js"></script>
     </body>

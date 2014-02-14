@@ -12,9 +12,9 @@ var base_osm = L.tileLayer(
 
 //two needs layers created
 
-var overlay_hhdamaged = L.mapbox.tileLayer('brcmaps.xhrjatt9');
+var overlay_hhdamaged = L.mapbox.tileLayer('brcmaps.gm59izfr');
 
-var overlay_damagedensity = L.mapbox.tileLayer('brcmaps.c41pds4i');
+var overlay_damagedensity = L.mapbox.tileLayer('brcmaps.y9esif6r');
 
 // two 3w layers created
 // these consist of teasers and basemap of boundaries
@@ -24,11 +24,11 @@ var es3w = new L.LayerGroup(),
     ssr3w = new L.LayerGroup();
 
 
-var overlay_es3w = L.mapbox.tileLayer('brcmaps.z0qnnrk9').addTo(es3w);
+var overlay_es3w = L.mapbox.tileLayer('brcmaps.n5wpcik9').addTo(es3w);
 
 var overlay_ssr3w = L.mapbox.tileLayer('brcmaps.nuoqd7vi').addTo(ssr3w);
 
-var grid_overlay_es3w = L.mapbox.gridLayer('brcmaps.z0qnnrk9').addTo(es3w);
+var grid_overlay_es3w = L.mapbox.gridLayer('brcmaps.n5wpcik9').addTo(es3w);
 
 var grid_overlay_ssr3w = L.mapbox.gridLayer('brcmaps.nuoqd7vi').addTo(ssr3w);
 
@@ -73,4 +73,16 @@ map.on('layerremove', function(e) {
     //map.removeControl(L.mapbox.gridControl(e.layer));  
     legendControl.removeLegend(e.layer.getTileJSON().legend);
   }
+});
+
+function resize(){
+    $('#map').height($(window).height()-$('#header').height()-10);
+    map.invalidateSize(false);
+}
+
+$(window).load(function(){
+    resize();
+});
+$(window).resize(function(){
+    resize();
 });
